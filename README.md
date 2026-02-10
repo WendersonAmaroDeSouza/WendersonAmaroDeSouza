@@ -1,4 +1,4 @@
-[🇺🇸 English](README.md) | [🇧🇷 Português](README.pt-BR.md)
+[**🇺🇸 English**](README.md) | [🇧🇷 Português](README.pt-BR.md)
 
 ## 👋 Wenderson — Senior Full Stack Developer
 
