@@ -1,3 +1,5 @@
+[🇺🇸 English](README.md) | [**🇧🇷 Português**](README.pt-BR.md)
+
 ## 👋 Wenderson — Desenvolvedor Full Stack Sênior
 
 Projeto e desenvolvo **sistemas prontos para produção**, com forte foco em **arquitetura, manutenibilidade e escalabilidade**.
