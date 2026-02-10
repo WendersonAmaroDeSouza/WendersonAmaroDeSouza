@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wenderson — Senior Full Stack Developer</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      function setLanguage(lang) {
+        document.querySelectorAll("[data-lang]").forEach(el => {
+          el.classList.toggle("hidden", el.dataset.lang !== lang);
+        });
+
+        document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+          btn.classList.toggle(
+            "text-white",
+            btn.dataset.langBtn === lang
+          );
+          btn.classList.toggle(
+            "text-slate-400",
+            btn.dataset.langBtn !== lang
+          );
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        setLanguage("en");
+      });
+    </script>
+  </head>
+
+  <body class="bg-slate-950 text-slate-200 antialiased">
+    <main class="max-w-5xl mx-auto px-6 py-16">
+
+      <!-- Language Switch -->
+      <div class="flex justify-end mb-10 gap-4 text-sm">
+        <button data-lang-btn="en" onclick="setLanguage('en')" class="font-medium">
+          EN
+        </button>
+        <button data-lang-btn="pt" onclick="setLanguage('pt')" class="font-medium">
+          PT-BR
+        </button>
+      </div>
+
+      <!-- ================= HEADER ================= -->
+
+      <section data-lang="en">
+        <h1 class="text-4xl font-bold tracking-tight">👋 Wenderson</h1>
+        <p class="mt-2 text-lg text-slate-400">Senior Full Stack Developer</p>
+
+        <p class="mt-6 leading-relaxed text-slate-300">
+          I design and build <strong class="text-white">production-grade systems</strong>
+          with a strong focus on
+          <strong class="text-white">architecture, maintainability and scalability</strong>.
+        </p>
+
+        <p class="mt-4 leading-relaxed text-slate-300">
+          I work mainly with complex systems involving offline operation, real-time data,
+          integrations and critical business rules.
+        </p>
+      </section>
+
+      <section data-lang="pt">
+        <h1 class="text-4xl font-bold tracking-tight">👋 Wenderson</h1>
+        <p class="mt-2 text-lg text-slate-400">Desenvolvedor Full Stack Sênior</p>
+
+        <p class="mt-6 leading-relaxed text-slate-300">
+          Projeto e desenvolvo <strong class="text-white">sistemas prontos para produção</strong>,
+          com forte foco em
+          <strong class="text-white">arquitetura, manutenibilidade e escalabilidade</strong>.
+        </p>
+
+        <p class="mt-4 leading-relaxed text-slate-300">
+          Atuo principalmente com sistemas complexos que envolvem operação offline,
+          dados em tempo real, integrações e regras de negócio críticas.
+        </p>
+      </section>
+
+      <!-- ================= PROJECTS ================= -->
+
+      <section class="mt-20">
+        <h2 class="text-2xl font-semibold border-b border-slate-800 pb-2 mb-8">
+          🚀 Featured Projects
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <!-- Project 1 -->
+          <div class="border border-slate-800 rounded-lg p-6 bg-slate-900">
+            <h3 class="font-semibold text-lg mb-2">PDV Offline-First</h3>
+
+            <p data-lang="en" class="text-slate-300 text-sm">
+              Point of Sale system designed to operate without internet,
+              with eventual synchronization and conflict handling.
+            </p>
+
+            <p data-lang="pt" class="text-slate-300 text-sm">
+              Sistema de PDV projetado para operar sem internet,
+              com sincronização eventual e tratamento de conflitos.
+            </p>
+
+            <p class="mt-3 text-xs text-slate-400">
+              React · NestJS · PostgreSQL
+            </p>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="border border-slate-800 rounded-lg p-6 bg-slate-900">
+            <h3 class="font-semibold text-lg mb-2">TMS (Transportation Management System)</h3>
+
+            <p data-lang="en" class="text-slate-300 text-sm">
+              Logistics and delivery management system with real-time tracking
+              and operational dashboards.
+            </p>
+
+            <p data-lang="pt" class="text-slate-300 text-sm">
+              Sistema de gestão de transporte e entregas com rastreamento
+              em tempo real e dashboards operacionais.
+            </p>
+
+            <p class="mt-3 text-xs text-slate-400">
+              React · React Native · Backend APIs
+            </p>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="border border-slate-800 rounded-lg p-6 bg-slate-900">
+            <h3 class="font-semibold text-lg mb-2">PDV + TMS Integration</h3>
+
+            <p data-lang="en" class="text-slate-300 text-sm">
+              Integrated ecosystem connecting sales, logistics and delivery
+              workflows in a single operational flow.
+            </p>
+
+            <p data-lang="pt" class="text-slate-300 text-sm">
+              Ecossistema integrado conectando vendas, logística e entregas
+              em um único fluxo operacional.
+            </p>
+
+            <p class="mt-3 text-xs text-slate-400">
+              Event-driven · Sync · WebSockets
+            </p>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="border border-slate-800 rounded-lg p-6 bg-slate-900">
+            <h3 class="font-semibold text-lg mb-2">Offline Sync Engine</h3>
+
+            <p data-lang="en" class="text-slate-300 text-sm">
+              Custom synchronization engine handling retries,
+              conflicts and partial connectivity.
+            </p>
+
+            <p data-lang="pt" class="text-slate-300 text-sm">
+              Motor de sincronização customizado lidando com tentativas,
+              conflitos e conectividade parcial.
+            </p>
+
+            <p class="mt-3 text-xs text-slate-400">
+              Offline-first · Data consistency
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= FOOTER ================= -->
+
+      <footer class="mt-24 pt-8 border-t border-slate-800 text-sm text-slate-500">
+        <p data-lang="en">
+          This page complements my GitHub profile and focuses on how I design systems.
+        </p>
+        <p data-lang="pt">
+          Esta página complementa meu perfil no GitHub e foca em como eu penso sistemas.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
