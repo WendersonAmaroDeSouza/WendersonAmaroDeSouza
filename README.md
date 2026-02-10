@@ -34,6 +34,7 @@ I work across **web**, **mobile** and **backend**, dealing with real-world const
 - System architecture and design decisions
 - Offline-first strategies and data synchronization
 - Applying AI to real-world products and operations
+- Project and team management
 
 ---
 
