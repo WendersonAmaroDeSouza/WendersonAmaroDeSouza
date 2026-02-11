@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resume — Wenderson Amaro de Souza</title>
 
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <script>
     function setLanguage(lang) {
@@ -20,7 +24,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-      setLanguage("en");
+      setLanguage("pt");
     });
   </script>
 </head>
@@ -32,9 +36,14 @@
     <!-- Top Navigation -->
     <div class="flex justify-between items-center mb-12">
 
-      <a href="/"
+      <a data-lang="en" href="../index.html"
          class="text-sm text-slate-400 hover:text-white transition">
         ← Back
+      </a>
+
+      <a data-lang="pt" href="../index.html"
+         class="text-sm text-slate-400 hover:text-white transition">
+        ← Voltar
       </a>
 
       <div class="flex gap-4 text-sm">
@@ -71,18 +80,18 @@
       <!-- Download Buttons -->
       <div class="mt-8 flex gap-4">
 
-        <a href="/assets/resume-en.pdf"
+        <a href="../assets/resume-pt.pdf"
            download
            data-lang="en"
            class="px-5 py-2 bg-white text-slate-900 text-sm font-medium rounded-md hover:bg-slate-200 transition">
-          Download PDF
+          Download Resume as PDF
         </a>
 
-        <a href="/assets/resume-pt.pdf"
+        <a href="../assets/resume-pt.pdf"
            download
            data-lang="pt"
            class="px-5 py-2 bg-white text-slate-900 text-sm font-medium rounded-md hover:bg-slate-200 transition hidden">
-          Baixar PDF
+          Baixar Currículo em PDF
         </a>
 
       </div>
@@ -92,7 +101,9 @@
     <!-- SUMMARY -->
     <section class="mb-12">
 
-      <h2 class="text-xl font-semibold mb-4">Summary</h2>
+      <h2 data-lang="en" class="text-xl font-semibold mb-4">Summary</h2>
+
+      <h2 data-lang="pt" class="text-xl font-semibold mb-4">Resumo</h2>
 
       <p data-lang="en" class="text-slate-300 leading-relaxed">
         Senior Full Stack Developer with experience designing and building
@@ -111,44 +122,221 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section class="mb-12">
+    <section class="mb-16">
 
-      <h2 class="text-xl font-semibold mb-6">Experience</h2>
+      <h2 data-lang="en" class="text-xl font-semibold mb-8">Experience</h2>
+      <h2 data-lang="pt" class="text-xl font-semibold mb-8 hidden">Experiência</h2>
 
-      <div class="space-y-8">
+      <div class="space-y-12">
 
+        <!-- ================= TRAMPAY ================= -->
         <div>
-          <h3 class="font-semibold text-lg">
-            Senior Full Stack Developer
-          </h3>
-          <p class="text-sm text-slate-500 mb-2">
-            2021 — Present
-          </p>
+          <h3 class="text-lg font-semibold">Trampay</h3>
 
-          <ul class="list-disc list-inside text-slate-300 text-sm space-y-2">
+          <!-- Role 1 -->
+          <div class="mt-6">
+            <h4 data-lang="en" class="font-medium">
+              Senior Technical Lead Software Engineer
+            </h4>
+            <h4 data-lang="pt" class="font-medium hidden">
+              Engenheiro de Software Líder Técnico Sênior
+            </h4>
 
-            <li data-lang="en">
-              Designed and implemented offline-first POS systems with eventual synchronization.
-            </li>
-            <li data-lang="pt" class="hidden">
-              Projetou e implementou sistemas de PDV offline-first com sincronização eventual.
-            </li>
+            <p class="text-sm text-slate-500 mb-4">
+              Sep 2025 — Present
+            </p>
 
-            <li data-lang="en">
-              Built TMS platforms with real-time tracking and WebSocket communication.
-            </li>
-            <li data-lang="pt" class="hidden">
-              Desenvolveu plataformas de TMS com rastreamento em tempo real e comunicação via WebSocket.
-            </li>
+            <ul class="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li data-lang="en">
+                Technical reference leading architecture decisions and trade-offs in critical financial systems.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Referência técnica conduzindo decisões arquiteturais e trade-offs em sistemas financeiros críticos.
+              </li>
 
-            <li data-lang="en">
-              Led backend architecture using NestJS, Rails, Python and Java.
-            </li>
-            <li data-lang="pt" class="hidden">
-              Liderou arquitetura backend utilizando NestJS, Rails, Python e Java.
-            </li>
+              <li data-lang="en">
+                Designed scalable backend and frontend solutions with banking API integrations.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Projetou soluções backend e frontend escaláveis com integrações bancárias.
+              </li>
 
-          </ul>
+              <li data-lang="en">
+                Led implementation of observability, CI/CD pipelines and performance optimization strategies.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Liderou implementação de observabilidade, pipelines CI/CD e estratégias de otimização de performance.
+              </li>
+
+              <li data-lang="en">
+                Mentored developers and collaborated closely with Product and UX teams.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Realizou mentoria técnica e colaboração próxima com Produto e UX.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="mt-8">
+            <h4 data-lang="en" class="font-medium">
+              Technical Lead Software Engineer
+            </h4>
+            <h4 data-lang="pt" class="font-medium hidden">
+              Engenheiro de Software Líder Técnico
+            </h4>
+
+            <p class="text-sm text-slate-500 mb-4">
+              Jan 2025 — Aug 2025
+            </p>
+
+            <ul class="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li data-lang="en">
+                Led development teams and managed end-to-end software projects.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Liderou equipes de desenvolvimento e gerenciou projetos de software ponta a ponta.
+              </li>
+
+              <li data-lang="en">
+                Defined architecture standards, automated testing strategies and quality processes.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Definiu padrões arquiteturais, estratégias de testes automatizados e processos de qualidade.
+              </li>
+
+              <li data-lang="en">
+                Developed financial modules including payment split, payroll and credit systems.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Desenvolveu módulos financeiros como split de pagamentos, folha e concessão de crédito.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="mt-8">
+            <h4 data-lang="en" class="font-medium">
+              Software Engineer
+            </h4>
+            <h4 data-lang="pt" class="font-medium hidden">
+              Engenheiro de Software
+            </h4>
+
+            <p class="text-sm text-slate-500 mb-4">
+              Jun 2024 — Dec 2024
+            </p>
+
+            <ul class="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li data-lang="en">
+                Developed backend services and financial systems with banking integrations.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Desenvolveu serviços backend e sistemas financeiros com integrações bancárias.
+              </li>
+
+              <li data-lang="en">
+                Improved CI/CD pipelines and implemented observability metrics.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Melhorou pipelines de CI/CD e implementou métricas de observabilidade.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Role 4 -->
+          <div class="mt-8">
+            <h4 data-lang="en" class="font-medium">
+              Full Stack Developer
+            </h4>
+            <h4 data-lang="pt" class="font-medium hidden">
+              Desenvolvedor Full Stack
+            </h4>
+
+            <p class="text-sm text-slate-500 mb-4">
+              Oct 2023 — May 2024
+            </p>
+
+            <ul class="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li data-lang="en">
+                Built integrations with banking APIs and delivery ecosystems.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Desenvolveu integrações com APIs bancárias e ecossistemas de entrega.
+              </li>
+
+              <li data-lang="en">
+                Created financial solutions for receivables anticipation and loan systems.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Criou soluções financeiras para antecipação de recebíveis e empréstimos.
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- ================= CONTATO CONTACT CENTER ================= -->
+        <div>
+          <h3 class="text-lg font-semibold">Contato Contact Center</h3>
+
+          <div class="mt-6">
+            <h4 data-lang="en" class="font-medium">
+              Full Stack Developer · Technical Lead
+            </h4>
+            <h4 data-lang="pt" class="font-medium hidden">
+              Desenvolvedor Full Stack · Líder Técnico
+            </h4>
+
+            <p class="text-sm text-slate-500 mb-4">
+              Mar 2022 — Sep 2023
+            </p>
+
+            <ul class="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li data-lang="en">
+                Led CRM and Virtual PABX architecture and development.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Liderou arquitetura e desenvolvimento de CRM e PABX Virtual.
+              </li>
+
+              <li data-lang="en">
+                Managed development teams and software project planning.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Gerenciou equipes de desenvolvimento e planejamento técnico.
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+            <h4 data-lang="en" class="font-medium">
+              Full Stack Developer
+            </h4>
+            <h4 data-lang="pt" class="font-medium hidden">
+              Desenvolvedor Full Stack
+            </h4>
+
+            <p class="text-sm text-slate-500 mb-4">
+              May 2020 — Feb 2022
+            </p>
+
+            <ul class="list-disc list-inside text-sm text-slate-300 space-y-2">
+              <li data-lang="en">
+                Built internal tools, FTTH monitoring systems and ERP integrations.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Desenvolveu ferramentas internas, sistemas de monitoramento FTTH e integrações com ERP.
+              </li>
+
+              <li data-lang="en">
+                Created dashboards and performance monitoring solutions using Grafana.
+              </li>
+              <li data-lang="pt" class="hidden">
+                Criou dashboards e soluções de monitoramento com Grafana.
+              </li>
+            </ul>
+          </div>
         </div>
 
       </div>
@@ -158,7 +346,9 @@
     <!-- TECH STACK -->
     <section class="mb-12">
 
-      <h2 class="text-xl font-semibold mb-6">Technical Stack</h2>
+      <h2 data-lang="en" class="text-xl font-semibold mb-6">Technical Stack</h2>
+
+      <h2 data-lang="pt" class="text-xl font-semibold mb-6">Stack Tecnológica</h2>
 
       <div class="grid md:grid-cols-2 gap-6 text-sm text-slate-300">
 
@@ -187,14 +377,82 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="pt-8 border-t border-slate-800 text-sm text-slate-500">
-      <p data-lang="en">
-        Available for senior-level engineering roles and complex system design projects.
-      </p>
-      <p data-lang="pt" class="hidden">
-        Disponível para posições de engenharia sênior e projetos de arquitetura de sistemas complexos.
-      </p>
+
+    <footer class="mt-24 border-t border-slate-800 pt-12 pb-10">
+      <div class="max-w-5xl mx-auto px-6">
+    
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+    
+          <!-- Left -->
+          <div>
+            <p class="text-slate-200 font-semibold text-lg">
+              Wenderson Amaro de Souza
+            </p>
+    
+            <p data-lang="en">
+              Available for senior-level software engineer roles and complex system design projects.
+            </p>
+
+            <p data-lang="pt" class="hidden">
+              Disponível para posições de engenheiro de software sênior e projetos de arquitetura de sistemas complexos.
+            </p>
+          </div>
+    
+          <!-- Right -->
+          <div class="flex md:justify-end">
+            <div class="flex gap-6 items-center text-slate-400">
+    
+              <a class="flex gap-2" href="mailto:wendersonamarodesouza@gmail.com"
+                 class="hover:text-white transition"
+                 aria-label="Email">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                E-Mail
+              </a>
+    
+              <a class="flex gap-2" href="https://github.com/WendersonAmaroDeSouza"
+                 target="_blank"
+                 class="hover:text-white transition"
+                 aria-label="GitHub">
+                <i data-lucide="github" class="w-5 h-5"></i>
+                GitHub
+              </a>
+    
+              <a class="flex gap-2" href="https://www.linkedin.com/in/wenderson-de-souza271125"
+                 target="_blank"
+                 class="hover:text-white transition"
+                 aria-label="LinkedIn">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                LinkedIn
+              </a>
+    
+            </div>
+          </div>
+        </div>
+    
+        <!-- Bottom -->
+        <div class="mt-12 pt-6 border-t border-slate-800 text-center text-slate-600 text-xs space-y-2">
+          <p class="flex items-center justify-center gap-2">
+            <i data-lucide="copyright" class="w-4 h-4"></i>
+            <span id="year"></span>
+            <span>Wenderson Amaro de Souza. All rights reserved.</span>
+          </p>
+    
+          <p class="tracking-wide">
+            Built & Designed by Wenderson
+          </p>
+        </div>
+    
+      </div>
     </footer>
+    
+    <!-- Lucide Icons -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        lucide.createIcons();
+        document.getElementById("year").textContent = new Date().getFullYear();
+      });
+    </script>
 
   </main>
 
