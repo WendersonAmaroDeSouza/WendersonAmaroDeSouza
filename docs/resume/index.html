@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Wenderson Amaro de Souza</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        el.classList.toggle("hidden", el.dataset.lang !== lang);
+      });
+
+      document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+        btn.classList.toggle("text-white", btn.dataset.langBtn === lang);
+        btn.classList.toggle("text-slate-400", btn.dataset.langBtn !== lang);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      setLanguage("en");
+    });
+  </script>
+</head>
+
+<body class="bg-slate-950 text-slate-200 antialiased">
+
+  <main class="max-w-4xl mx-auto px-6 py-16">
+
+    <!-- Top Navigation -->
+    <div class="flex justify-between items-center mb-12">
+
+      <a href="/"
+         class="text-sm text-slate-400 hover:text-white transition">
+        ← Back
+      </a>
+
+      <div class="flex gap-4 text-sm">
+        <button data-lang-btn="en" onclick="setLanguage('en')" class="font-medium">
+          EN
+        </button>
+        <button data-lang-btn="pt" onclick="setLanguage('pt')" class="font-medium">
+          PT-BR
+        </button>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <section class="border-b border-slate-800 pb-10 mb-10">
+
+      <h1 class="text-4xl font-bold tracking-tight">
+        Wenderson Amaro de Souza
+      </h1>
+
+      <p data-lang="en" class="mt-2 text-lg text-slate-400">
+        Senior Full Stack Developer
+      </p>
+
+      <p data-lang="pt" class="mt-2 text-lg text-slate-400 hidden">
+        Desenvolvedor Full Stack Sênior
+      </p>
+
+      <div class="mt-6 flex flex-wrap gap-6 text-sm text-slate-400">
+        <span>📍 Brazil</span>
+        <span>💻 React · NestJS · Ruby on Rails · Python · Java</span>
+        <span>🗄 PostgreSQL</span>
+      </div>
+
+      <!-- Download Buttons -->
+      <div class="mt-8 flex gap-4">
+
+        <a href="/assets/resume-en.pdf"
+           download
+           data-lang="en"
+           class="px-5 py-2 bg-white text-slate-900 text-sm font-medium rounded-md hover:bg-slate-200 transition">
+          Download PDF
+        </a>
+
+        <a href="/assets/resume-pt.pdf"
+           download
+           data-lang="pt"
+           class="px-5 py-2 bg-white text-slate-900 text-sm font-medium rounded-md hover:bg-slate-200 transition hidden">
+          Baixar PDF
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="mb-12">
+
+      <h2 class="text-xl font-semibold mb-4">Summary</h2>
+
+      <p data-lang="en" class="text-slate-300 leading-relaxed">
+        Senior Full Stack Developer with experience designing and building
+        production-grade systems. Strong focus on architecture, scalability,
+        offline-first strategies and data consistency. Experienced in building
+        complex systems involving logistics, POS operations and real-time integrations.
+      </p>
+
+      <p data-lang="pt" class="text-slate-300 leading-relaxed hidden">
+        Desenvolvedor Full Stack Sênior com experiência em projetar e construir
+        sistemas prontos para produção. Forte foco em arquitetura, escalabilidade,
+        estratégias offline-first e consistência de dados. Experiência em sistemas
+        complexos envolvendo logística, PDV e integrações em tempo real.
+      </p>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="mb-12">
+
+      <h2 class="text-xl font-semibold mb-6">Experience</h2>
+
+      <div class="space-y-8">
+
+        <div>
+          <h3 class="font-semibold text-lg">
+            Senior Full Stack Developer
+          </h3>
+          <p class="text-sm text-slate-500 mb-2">
+            2021 — Present
+          </p>
+
+          <ul class="list-disc list-inside text-slate-300 text-sm space-y-2">
+
+            <li data-lang="en">
+              Designed and implemented offline-first POS systems with eventual synchronization.
+            </li>
+            <li data-lang="pt" class="hidden">
+              Projetou e implementou sistemas de PDV offline-first com sincronização eventual.
+            </li>
+
+            <li data-lang="en">
+              Built TMS platforms with real-time tracking and WebSocket communication.
+            </li>
+            <li data-lang="pt" class="hidden">
+              Desenvolveu plataformas de TMS com rastreamento em tempo real e comunicação via WebSocket.
+            </li>
+
+            <li data-lang="en">
+              Led backend architecture using NestJS, Rails, Python and Java.
+            </li>
+            <li data-lang="pt" class="hidden">
+              Liderou arquitetura backend utilizando NestJS, Rails, Python e Java.
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="mb-12">
+
+      <h2 class="text-xl font-semibold mb-6">Technical Stack</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 text-sm text-slate-300">
+
+        <div>
+          <h4 class="font-medium mb-2 text-slate-400">Front-end</h4>
+          <p>React · React Native · Vue.js</p>
+        </div>
+
+        <div>
+          <h4 class="font-medium mb-2 text-slate-400">Back-end</h4>
+          <p>NestJS · Ruby on Rails · Python · Java</p>
+        </div>
+
+        <div>
+          <h4 class="font-medium mb-2 text-slate-400">Database</h4>
+          <p>PostgreSQL</p>
+        </div>
+
+        <div>
+          <h4 class="font-medium mb-2 text-slate-400">Architecture</h4>
+          <p>Offline-first · Event-driven · WebSockets · Sync Engine</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pt-8 border-t border-slate-800 text-sm text-slate-500">
+      <p data-lang="en">
+        Available for senior-level engineering roles and complex system design projects.
+      </p>
+      <p data-lang="pt" class="hidden">
+        Disponível para posições de engenharia sênior e projetos de arquitetura de sistemas complexos.
+      </p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
