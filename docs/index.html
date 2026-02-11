@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,9 @@
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
       function setLanguage(lang) {
@@ -26,9 +29,13 @@
         });
       }
 
+      lucide.createIcons();
+
       document.addEventListener("DOMContentLoaded", () => {
-        setLanguage("en");
+        setLanguage("pt");
       });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </head>
 
@@ -82,8 +89,12 @@
       <!-- ================= PROJECTS ================= -->
 
       <section class="mt-20">
-        <h2 class="text-2xl font-semibold border-b border-slate-800 pb-2 mb-8">
+        <h2 data-lang="en" class="text-2xl font-semibold border-b border-slate-800 pb-2 mb-8">
           🚀 Featured Projects
+        </h2>
+
+        <h2 data-lang="pt" class="text-2xl font-semibold border-b border-slate-800 pb-2 mb-8">
+          🚀 Projetos em Destaque
         </h2>
 
         <div class="grid md:grid-cols-2 gap-6">
@@ -169,14 +180,81 @@
 
       <!-- ================= FOOTER ================= -->
 
-      <footer class="mt-24 pt-8 border-t border-slate-800 text-sm text-slate-500">
-        <p data-lang="en">
-          This page complements my GitHub profile and focuses on how I design systems.
-        </p>
-        <p data-lang="pt">
-          Esta página complementa meu perfil no GitHub e foca em como eu penso sistemas.
-        </p>
+      <footer class="mt-24 border-t border-slate-800 pt-12 pb-10">
+        <div class="max-w-5xl mx-auto px-6">
+      
+          <div class="grid md:grid-cols-2 gap-10 items-start">
+      
+            <!-- Left -->
+            <div>
+              <p class="text-slate-200 font-semibold text-lg">
+                Wenderson Amaro de Souza
+              </p>
+      
+              <p data-lang="en" class="text-slate-500 mt-3 text-sm leading-relaxed max-w-md">
+                This page complements my GitHub profile and highlights how I design and architect systems.
+              </p>
+      
+              <p data-lang="pt" class="text-slate-500 mt-3 text-sm leading-relaxed max-w-md">
+                Esta página complementa meu perfil no GitHub e destaca como eu projeto e estruturo sistemas.
+              </p>
+            </div>
+      
+            <!-- Right -->
+            <div class="flex md:justify-end">
+              <div class="flex gap-6 items-center text-slate-400">
+      
+                <a class="flex gap-2" href="mailto:wendersonamarodesouza@gmail.com"
+                   class="hover:text-white transition"
+                   aria-label="Email">
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                  E-Mail
+                </a>
+      
+                <a class="flex gap-2" href="https://github.com/WendersonAmaroDeSouza"
+                   target="_blank"
+                   class="hover:text-white transition"
+                   aria-label="GitHub">
+                  <i data-lucide="github" class="w-5 h-5"></i>
+                  GitHub
+                </a>
+      
+                <a class="flex gap-2" href="https://www.linkedin.com/in/wenderson-de-souza271125"
+                   target="_blank"
+                   class="hover:text-white transition"
+                   aria-label="LinkedIn">
+                  <i data-lucide="linkedin" class="w-5 h-5"></i>
+                  LinkedIn
+                </a>
+      
+              </div>
+            </div>
+          </div>
+      
+          <!-- Bottom -->
+          <div class="mt-12 pt-6 border-t border-slate-800 text-center text-slate-600 text-xs space-y-2">
+            <p class="flex items-center justify-center gap-2">
+              <i data-lucide="copyright" class="w-4 h-4"></i>
+              <span id="year"></span>
+              <span>Wenderson Amaro de Souza. All rights reserved.</span>
+            </p>
+      
+            <p class="tracking-wide">
+              Built & Designed by Wenderson
+            </p>
+          </div>
+      
+        </div>
       </footer>
+      
+      <!-- Lucide Icons -->
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          lucide.createIcons();
+          document.getElementById("year").textContent = new Date().getFullYear();
+        });
+      </script>
     </main>
   </body>
 </html>
